@@ -26,18 +26,27 @@ struct TransparentWindowView: NSViewRepresentable {
 struct PasteView: View {
     @ObservedObject var manager = CopiedItemsManager()
     
-    func typeTextIntoTextBox(text: String) {
+    func pasteAndClose(_ text: String) {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(text, forType: .string)
+
         let script = """
-        tell application "System Events" to keystroke "\(text)"
-        tell application "Historian" to quit
+        tell application "System Events"
+            set textToType to "\(text)"
+            keystroke textToType
+        end tell
         """
+        if let appleScript = NSAppleScript(source: script) {
+            var error: NSDictionary?
+            appleScript.executeAndReturnError(&error)
+            if let error = error {
+                print("AppleScript Error: \(error)")
+            }
+        }
         
-        let scriptObject = NSAppleScript(source: script)
-        var error: NSDictionary?
-        let output = scriptObject?.executeAndReturnError(&error)
-        
-        if let error = error {
-            print("Error executing AppleScript: \(error)")
+        if let keyWindow = NSApplication.shared.keyWindow {
+            keyWindow.performClose(nil)
         }
     }
     
@@ -61,7 +70,7 @@ struct PasteView: View {
                 VStack {
                     ForEach(manager.copiedItems, id: \.self) { item in
                         Button {
-                            typeTextIntoTextBox(text: item)
+                            pasteAndClose(item)
                         } label: {
                             HStack {
                                 Text(item)
