@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F14FE7322C67260C009AE053 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = F14FE7312C67260C009AE053 /* HotKey */; };
 		F1B8EE652C64DFD400EA1827 /* HistorianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE642C64DFD400EA1827 /* HistorianApp.swift */; };
 		F1B8EE672C64DFD400EA1827 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE662C64DFD400EA1827 /* ContentView.swift */; };
 		F1B8EE692C64DFD600EA1827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B8EE682C64DFD600EA1827 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		F1B8EE6D2C64DFD600EA1827 /* Historian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Historian.entitlements; sourceTree = "<group>"; };
 		F1B8EE732C64E5D900EA1827 /* CopiedClassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiedClassManager.swift; sourceTree = "<group>"; };
 		F1B8EE752C64E6FD00EA1827 /* PasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteView.swift; sourceTree = "<group>"; };
+		F1D822182C672A800032E29E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14FE7322C67260C009AE053 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		F1B8EE582C64DFD400EA1827 = {
 			isa = PBXGroup;
 			children = (
+				F1D822182C672A800032E29E /* README.md */,
 				F1B8EE632C64DFD400EA1827 /* Historian */,
 				F1B8EE622C64DFD400EA1827 /* Products */,
 			);
@@ -91,6 +95,9 @@
 			dependencies = (
 			);
 			name = Historian;
+			packageProductDependencies = (
+				F14FE7312C67260C009AE053 /* HotKey */,
+			);
 			productName = Historian;
 			productReference = F1B8EE612C64DFD400EA1827 /* Historian.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +126,9 @@
 				Base,
 			);
 			mainGroup = F1B8EE582C64DFD400EA1827;
+			packageReferences = (
+				F14FE7302C67260C009AE053 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = F1B8EE622C64DFD400EA1827 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F14FE7302C67260C009AE053 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F14FE7312C67260C009AE053 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F14FE7302C67260C009AE053 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1B8EE592C64DFD400EA1827 /* Project object */;
 }
