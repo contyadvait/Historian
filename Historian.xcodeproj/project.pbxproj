@@ -11,6 +11,8 @@
 		F1B8EE672C64DFD400EA1827 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE662C64DFD400EA1827 /* ContentView.swift */; };
 		F1B8EE692C64DFD600EA1827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B8EE682C64DFD600EA1827 /* Assets.xcassets */; };
 		F1B8EE6C2C64DFD600EA1827 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B8EE6B2C64DFD600EA1827 /* Preview Assets.xcassets */; };
+		F1B8EE742C64E5D900EA1827 /* CopiedClassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE732C64E5D900EA1827 /* CopiedClassManager.swift */; };
+		F1B8EE762C64E6FD00EA1827 /* PasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE752C64E6FD00EA1827 /* PasteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		F1B8EE682C64DFD600EA1827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B8EE6B2C64DFD600EA1827 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1B8EE6D2C64DFD600EA1827 /* Historian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Historian.entitlements; sourceTree = "<group>"; };
+		F1B8EE732C64E5D900EA1827 /* CopiedClassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiedClassManager.swift; sourceTree = "<group>"; };
+		F1B8EE752C64E6FD00EA1827 /* PasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 		F1B8EE632C64DFD400EA1827 /* Historian */ = {
 			isa = PBXGroup;
 			children = (
+				F1B8EE732C64E5D900EA1827 /* CopiedClassManager.swift */,
 				F1B8EE642C64DFD400EA1827 /* HistorianApp.swift */,
+				F1B8EE752C64E6FD00EA1827 /* PasteView.swift */,
 				F1B8EE662C64DFD400EA1827 /* ContentView.swift */,
 				F1B8EE682C64DFD600EA1827 /* Assets.xcassets */,
 				F1B8EE6D2C64DFD600EA1827 /* Historian.entitlements */,
@@ -141,6 +147,8 @@
 			files = (
 				F1B8EE672C64DFD400EA1827 /* ContentView.swift in Sources */,
 				F1B8EE652C64DFD400EA1827 /* HistorianApp.swift in Sources */,
+				F1B8EE762C64E6FD00EA1827 /* PasteView.swift in Sources */,
+				F1B8EE742C64E5D900EA1827 /* CopiedClassManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +287,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +315,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
