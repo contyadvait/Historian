@@ -47,6 +47,7 @@
 		F1B8EE582C64DFD400EA1827 = {
 			isa = PBXGroup;
 			children = (
+				F1039E5C2C687BCE00768F31 /* NSWindowSubclass.swift */,
 				F1D822182C672A800032E29E /* README.md */,
 				F1B8EE632C64DFD400EA1827 /* Historian */,
 				F1B8EE622C64DFD400EA1827 /* Products */,
