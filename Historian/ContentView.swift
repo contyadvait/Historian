@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AXSwift
 
 struct ContentView: View {
     @ObservedObject var manager = CopiedItemsManager()
@@ -16,6 +17,13 @@ struct ContentView: View {
                 Text("Clipboard History - Historian")
             }
             .font(.title)
+            .onAppear {
+                guard UIElement.isProcessTrusted(withPrompt: true) else {
+                    NSLog("No accessibility API permission, exiting")
+                    NSRunningApplication.current.terminate()
+                    return
+                }
+            }
             
             List(manager.copiedItems, id: \.self) { item in
                 Text(item)

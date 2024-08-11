@@ -66,21 +66,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func openContentView() {
-        if window == nil {
-            let contentView = PasteView()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            if self.window == nil {
+                let contentView = PasteView()
+                
+                self.window = NSWindow(
+                    contentRect: NSRect(x: 0, y: 0, width: 500, height: 500),
+                    styleMask: [.titled, .closable, .miniaturizable],
+                    backing: .buffered, defer: false)
+                self.window?.center()
+                self.window?.setFrameAutosaveName("Clipboard History - Historian")
+                self.window?.contentView = NSHostingView(rootView: contentView)
+            }
             
-            window = NSWindow(
-                contentRect: NSRect(x: 0, y: 0, width: 500, height: 500),
-                styleMask: [.titled, .closable, .miniaturizable],
-                backing: .buffered, defer: false)
-            window?.center()
-            window?.setFrameAutosaveName("Clipboard History - Historian")
-            window?.contentView = NSHostingView(rootView: contentView)
+            self.window?.makeKeyAndOrderFront(nil)
+            NSApp.activate(ignoringOtherApps: true)
         }
-        
-        window?.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
     }
+
     
     @objc func quitApp() {
         NSApp.terminate(nil)
