@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1039E572C6875DD00768F31 /* AXSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1039E562C6875DD00768F31 /* AXSwift */; };
 		F14FE7322C67260C009AE053 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = F14FE7312C67260C009AE053 /* HotKey */; };
 		F1B8EE652C64DFD400EA1827 /* HistorianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE642C64DFD400EA1827 /* HistorianApp.swift */; };
 		F1B8EE672C64DFD400EA1827 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8EE662C64DFD400EA1827 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1039E5C2C687BCE00768F31 /* NSWindowSubclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowSubclass.swift; sourceTree = "<group>"; };
 		F1B8EE612C64DFD400EA1827 /* Historian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Historian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B8EE642C64DFD400EA1827 /* HistorianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorianApp.swift; sourceTree = "<group>"; };
 		F1B8EE662C64DFD400EA1827 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14FE7322C67260C009AE053 /* HotKey in Frameworks */,
+				F1039E572C6875DD00768F31 /* AXSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 		F1B8EE582C64DFD400EA1827 = {
 			isa = PBXGroup;
 			children = (
+				F1039E5C2C687BCE00768F31 /* NSWindowSubclass.swift */,
 				F1D822182C672A800032E29E /* README.md */,
 				F1B8EE632C64DFD400EA1827 /* Historian */,
 				F1B8EE622C64DFD400EA1827 /* Products */,
@@ -97,6 +101,7 @@
 			name = Historian;
 			packageProductDependencies = (
 				F14FE7312C67260C009AE053 /* HotKey */,
+				F1039E562C6875DD00768F31 /* AXSwift */,
 			);
 			productName = Historian;
 			productReference = F1B8EE612C64DFD400EA1827 /* Historian.app */;
@@ -128,6 +133,7 @@
 			mainGroup = F1B8EE582C64DFD400EA1827;
 			packageReferences = (
 				F14FE7302C67260C009AE053 /* XCRemoteSwiftPackageReference "HotKey" */,
+				F1039E552C6875DD00768F31 /* XCRemoteSwiftPackageReference "AXSwift" */,
 			);
 			productRefGroup = F1B8EE622C64DFD400EA1827 /* Products */;
 			projectDirPath = "";
@@ -363,6 +369,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F1039E552C6875DD00768F31 /* XCRemoteSwiftPackageReference "AXSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tmandry/AXSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
 		F14FE7302C67260C009AE053 /* XCRemoteSwiftPackageReference "HotKey" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/soffes/HotKey";
@@ -374,6 +388,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F1039E562C6875DD00768F31 /* AXSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1039E552C6875DD00768F31 /* XCRemoteSwiftPackageReference "AXSwift" */;
+			productName = AXSwift;
+		};
 		F14FE7312C67260C009AE053 /* HotKey */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F14FE7302C67260C009AE053 /* XCRemoteSwiftPackageReference "HotKey" */;
